@@ -1,0 +1,135 @@
+body {
+    background: #1a1a2e;
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+}
+
+.header {
+    background: #3c4140;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    background: #d64b8a;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.animate-card {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.drop-zone {
+    border: 2px dashed #f6f6f6;
+    border-radius: 10px;
+    background: #b32f9f;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.drop-zone.dragover {
+    background: #5d5d64;
+    border-color: #ff0077;
+    transform: scale(1.02);
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.table {
+    background: #8989a9;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.table thead th {
+    background: #16213e;
+    color: #00ffaa;
+}
+
+.table tbody tr {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.btn-neon {
+    background: #79636d;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-neon:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 119, 0.7);
+    transform: scale(1.05);
+}
+
+.input-glow:focus {
+    border-color: #00ffaa;
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+}
+
+.badge.bg-success {
+    background: #00ffaa !important;
+}
+
+.badge.bg-danger {
+    background: #ff0077 !important;
+}
+
+#sendProgress {
+    background: #00ffaa !important;
+    transition: width 0.5s ease-in-out;
+}
+
+.toast {
+    background: #2a2a4e;
+    color: #e0e0e0;
+    border: 1px solid #00ffaa;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.list-group-item {
+    background: #2a2a4e;
+    color: #e0e0e0;
+    border: 1px solid #3a3a6e;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background: #9b6b19;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .table {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .drop-zone {
+        padding: 2rem;
+    }
+
+    .btn-neon {
+        font-size: 0.9rem;
+    }
+}
